@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Call</title>
+</head>
+<body>
+    <h2>Nhấn nút để vào phòng họp</h2>
+    <button onclick="startCall()">Tham gia Cuộc Gọi</button>
+    <iframe id="videoCallFrame" width="800" height="600" allow="camera; microphone; autoplay" style="display:none; border: 1px solid black;"></iframe>
+
+    <script>
+        function startCall() {
+            let roomUrl = "https://meetingdi.daily.co/meetinghok"; // Thay bằng Room URL của bạn
+            let frame = document.getElementById("videoCallFrame");
+            frame.src = roomUrl;
+            frame.style.display = "block";
+        }
+    </script>
+</body>
+</html>
